@@ -57,7 +57,7 @@ public class ConferenceApi {
         
         // TODO 2
         // If the user is not logged in, throw an UnauthorizedException
-	    if(user.getUserId() == null) {
+	    if(user == null) {
 	        throw new UnauthorizedException("User not logged in!");	
 	    }
         // TODO 1
