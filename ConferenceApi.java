@@ -78,10 +78,16 @@ public class ConferenceApi {
 
         // TODO 2
         // Get the userId and mainEmail
+	    userId = user.getUserId();
+	    mainEmail = user.getEmail();
 
         // TODO 2
         // If the displayName is null, set it to default value based on the user's email
         // by calling extractDefaultDisplayNameFromEmail(...)
+	    if(displayName == null)
+	    {
+	    	displayName = extractDefaultDisplayNameFromEmail(mainEmail);
+	    }
 
         // Create a new Profile entity from the
         // userId, displayName, mainEmail and teeShirtSize
